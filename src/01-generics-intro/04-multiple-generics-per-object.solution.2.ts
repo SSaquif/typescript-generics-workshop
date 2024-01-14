@@ -1,11 +1,13 @@
 import { expect, it } from "vitest";
 import { Equal, Expect } from "../helpers/type-utils";
 
+// Interface solution
 interface Params<T1, T2> {
   a: T1;
   b: T2;
 }
 
+// Need to redeclare the generic types here
 const returnBothOfWhatIPassIn = <T1, T2>(params: Params<T1, T2>) => {
   return {
     first: params.a,

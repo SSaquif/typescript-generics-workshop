@@ -1,6 +1,7 @@
 import { expect, it } from "vitest";
 import { Equal, Expect } from "../helpers/type-utils";
 
+// same as previous but uses type instead of interface
 type Params<T1, T2> = {
   a: T1;
   b: T2;
