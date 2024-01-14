@@ -1,9 +1,11 @@
 import { Equal, Expect } from "../helpers/type-utils";
 
-export const createSet = <T>() => {
+// set default type argument to string
+export const createSet = <T = string>() => {
   return new Set<T>();
 };
 
+// overide default type argument to number
 const numberSet = createSet<number>();
 const stringSet = createSet<string>();
 const otherStringSet = createSet();

@@ -1,6 +1,8 @@
 import { expect, it } from "vitest";
 import { Equal, Expect } from "../helpers/type-utils";
 
+// The explanation in the course is really good. The right side column
+// Clarifies a few more things
 export class Component<TProps> {
   private props: TProps;
 
@@ -11,7 +13,8 @@ export class Component<TProps> {
   getProps = () => this.props;
 }
 
-const cloneComponent = (component: unknown) => {
+// I just didnt name it TProps to  show that you can name it anything
+const cloneComponent = <T>(component: Component<T>) => {
   return new Component(component.getProps());
 };
 

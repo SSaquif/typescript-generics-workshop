@@ -9,8 +9,9 @@ const array = [
     name: "Steve",
   },
 ];
-
-const obj = array.reduce((accum, item) => {
+// other solution: assign the type to the accumulator
+// const obj = array.reduce((accum: Record<string, { name: string }>, item) => {
+const obj = array.reduce<Record<string, { name: string }>>((accum, item) => {
   accum[item.name] = item;
   return accum;
 }, {});
